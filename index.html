@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Todo List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>✨ My Tasks</h1>
+        
+        <div class="input-group">
+            <div class="input-row">
+                <input type="text" id="task-input" placeholder="What needs to be done?" autocomplete="off">
+                <input type="time" id="time-input">
+                <select id="priority-input" class="priority-select">
+                    <option value="Low">Low</option>
+                    <option value="Medium" selected>Medium</option>
+                    <option value="High">High</option>
+                </select>
+            </div>
+            <button id="add-btn">
+                <span>+</span> Add Task
+            </button>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-view="active">Active Tasks</button>
+            <button class="tab-btn" data-view="deleted">Recently Deleted</button>
+        </div>
+
+        <ul class="todo-list" id="todo-list">
+            <!-- Tasks will be added here dynamically -->
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
